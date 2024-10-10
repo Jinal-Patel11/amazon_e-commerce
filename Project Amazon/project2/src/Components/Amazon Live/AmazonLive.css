@@ -1,0 +1,139 @@
+.amazon-live-section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.live-video {
+  flex: 1;
+  margin-right: 20px;
+  position: relative;
+}
+
+.live-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.live-video:hover .overlay {
+  opacity: 1;
+}
+
+.watch-now-btn {
+  background-color: #f0c14b;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.live-products {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-card-live {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  width: 21%;
+  height: 70vh;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-live {
+  width: 100%;
+  height: 50vh;
+  border-radius: 4px;
+}
+
+.product-name-live {
+  font-size: 0.85rem;
+  margin: 10px 0;
+}
+
+.product-price-live {
+  color: red;
+  font-size: 1rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 0.85rem;
+}
+
+.product-discount {
+  color: green;
+  font-size: 0.85rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .amazon-live-section {
+    flex-direction: column;
+  }
+
+  .live-video {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .live-products {
+    justify-content: space-between;
+  }
+
+  .product-card-live {
+    width: 48%; /* Adjust width for tablet */
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .amazon-live-section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .product-card-live {
+    width: 100%; /* Full width for mobile */
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .product-name-live,
+  .product-price-live,
+  .original-price,
+  .product-discount {
+    font-size: 0.75rem; /* Smaller font on mobile */
+  }
+
+  .watch-now-btn {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,252 @@
+*{
+    font-family: Arial;
+    box-sizing: border-box; /* Corrected to "box-sizing" */
+}
+
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    align-items: center;
+    justify-content: space-between; /* Adjust space distribution */
+     padding: 0 10px; /*Added padding for space */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+.nav-logo{
+    height: 50px;
+    width: 120px;
+}
+
+.logo{
+    background-image: url("https://www.thesun.co.uk/wp-content/uploads/2022/02/Amazon-Logo-1024x426-1.png?strip=all&w=960");
+    background-size: cover;
+    height: 40px;
+    width: 100%;
+}
+
+.border{
+    border: 1.5px solid transparent;
+}
+
+.border:hover{
+    border: 1.5px solid white;
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.85rem;
+}
+p{
+    margin-bottom: 0;
+}
+
+.add-sec{
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    font-size: 15px;
+}
+
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    color: #0f1111;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.nav-return span{
+    font-size: 0.7rem;
+}
+
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i{
+    font-size: 30px;
+}
+
+.logout-btn {
+    margin-left: 10px;
+    background-color: #ff9900; /* Amazon-like yellow-orange color */
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.logout-btn:hover {
+    background-color: #ffa31a; /* Slightly lighter color on hover */
+}
+
+.logout-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 3px 2px rgba(255, 153, 0, 0.6); /* Add focus shadow */
+}
+
+.pannel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between; /* Adjust alignment */
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 10px; /* Added padding */
+}
+
+.pannel-option{
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+.pannel-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Navbar.css */
+
+/* Toggle button styles */
+.navbar-toggler {
+    display: none;
+  }
+  
+  /* Display toggle button on screens smaller than 1150px */
+  @media (max-width: 1150px) {
+    .navbar-toggler {
+      display: block;
+      position: relative;
+      z-index: 1051; /* Ensure it appears above other elements */
+    }
+  
+    .navbar-collapse {
+      display: none;
+    }
+  
+    .navbar-collapse.collapse.show {
+      display: block;
+    }
+  
+    /* Adjust navbar items */
+    .navbar-nav {
+      flex-direction: column;
+      background-color: #131921;
+      position: absolute;
+      width: 100%;
+      top: 56px; /* Below the navbar */
+      left: 0;
+      padding: 1rem;
+      z-index: 1000; /* Ensure it appears above other content */
+    }
+  
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  
+    .nav-signin {
+      text-align: center;
+      padding: 0.5rem;
+    }
+  
+    .nav-search {
+      margin-top: 1rem;
+    }
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .nav-search {
+        width: 80%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-search {
+        width: 70%; /* Adjust search bar width */
+    }
+    .navbar {
+        justify-content: space-around; /* More compact layout */
+        width: 100%;
+    }
+    .pannel, .pannel-option {
+        font-size: 0.75rem; /* Reduce font size */
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-search {
+        width: 100%; /* Full width search bar */
+        margin-bottom: 10px;
+    }
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        height: auto; /* Allow dynamic height */
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .pannel-option {
+        width: 100%; /* Adjust panel width */
+    }
+}
+
+@media (max-width: 463px) {
+    .pannel-option, .pannel-deals {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 298px) {
+    .pannel-option, .pannel-deals {
+        font-size: 6px;
+    }
+    .navbar{
+        width: 100%;
+    }
+}

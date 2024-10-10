@@ -1,0 +1,46 @@
+.thankyou-container {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #111;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  strong {
+    color: #f08804;
+  }
+  
+  .thankyou-actions {
+    margin-top: 20px;
+  }
+  
+  .continue-shopping-btn, .view-orders-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continue-shopping-btn:hover, .view-orders-btn:hover {
+    background-color: #ddb347;
+  }
+  

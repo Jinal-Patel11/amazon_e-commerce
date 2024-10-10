@@ -1,0 +1,126 @@
+/* Main container */
+.jewellery-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header styling */
+  .jewellery-container h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .search-bar button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .search-bar button:hover {
+    background-color: #ddb347;
+  }
+  
+  /* Product grid styling */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-title {
+    font-size: 16px;
+    /* color: #007185; */
+    margin: 10px 0;
+    text-decoration: none;
+  }
+  
+  .product-title:hover {
+    text-decoration: underline;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .search-bar input {
+      max-width: 300px;
+    }
+  
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .product-card {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-bar input {
+      max-width: 100%;
+    }
+  
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .product-card {
+      padding: 8px;
+    }
+    
+    .product-title {
+      font-size: 14px;
+    }
+    
+    .product-price {
+      font-size: 16px;
+    }
+  }
+  
